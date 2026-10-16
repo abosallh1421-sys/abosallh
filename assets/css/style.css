@@ -334,6 +334,16 @@ strong { font-weight: 700; }
 .members .member-lead small { color: var(--gold-soft); }
 .members .member-lead .avatar { background: var(--gold); color: var(--green); }
 .profile.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.committees .members { grid-template-columns: 1fr; gap: 10px; }
+.committee-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.committee-head h3 { margin: 0; }
+.committees + .sub-title { margin-top: 48px; }
+.exec-name {
+  display: inline-flex; align-items: center; gap: 16px; margin-top: 8px;
+  background: var(--green); color: var(--cream); border-radius: var(--radius); padding: 16px 22px;
+}
+.exec-name .role { display: block; color: var(--gold); font-size: .88rem; }
+.exec-name b { font-family: var(--font-head); font-weight: 600; font-size: 1.15rem; color: var(--cream); }
 .sub-title { margin: 48px 0 18px; font-size: clamp(1.15rem, 2.2vw, 1.4rem); }
 .duties { margin-top: 8px; gap: 40px; }
 .duties .sub-title, .assembly-types + .sub-title { margin-top: 40px; }
