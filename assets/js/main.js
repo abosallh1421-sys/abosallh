@@ -1,19 +1,58 @@
+// يعمل بعد layout.js: القائمة في الجوال، الوضع الليلي، العودة للأعلى، حركة الظهور
+
 // القائمة في الجوال
 const toggle = document.querySelector('.nav-toggle');
 const nav = document.getElementById('main-nav');
 
-toggle.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', open);
-  toggle.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
-});
+if (toggle && nav) {
+  const setOpen = (open) => {
+    nav.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+  };
+  toggle.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+}
 
-// سنة التذييل
-document.querySelectorAll('.year').forEach((el) => (el.textContent = new Date().getFullYear()));
+// الوضع الليلي — يُحفظ الاختيار، وبدونه يتبع إعداد الجهاز
+const THEME_KEY = 'nafa-theme';
+const themeBtn = document.querySelector('.theme-toggle');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+const isDark = () => (document.documentElement.dataset.theme || (prefersDark.matches ? 'dark' : 'light')) === 'dark';
+const syncThemeBtn = () => themeBtn && themeBtn.setAttribute('aria-pressed', isDark());
+
+if (themeBtn) {
+  syncThemeBtn();
+  prefersDark.addEventListener('change', syncThemeBtn);
+  themeBtn.addEventListener('click', () => {
+    const next = isDark() ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem(THEME_KEY, next); } catch {}
+    syncThemeBtn();
+  });
+}
+
+// زر العودة للأعلى
+const toTop = document.querySelector('.to-top');
+
+if (toTop) {
+  const onScroll = () => toTop.classList.toggle('show', window.scrollY > 600);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0 });
+    document.querySelector('.skip-link')?.focus({ preventScroll: true });
+  });
+}
 
 // حركة الظهور عند التمرير
 const revealTargets = document.querySelectorAll(
-  '.section-head, .card, .goals li, .maxim, .news-card, .doc-card, .accordion details, .member, .steps li, .board-empty, .form-card, .two-col > *'
+  '.section-head, .card, .goals li, .maxim, .news-card, .doc-card, .accordion details, .member, .steps li, .form-card, .two-col > *'
 );
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
@@ -30,7 +69,7 @@ if ('IntersectionObserver' in window) {
   revealTargets.forEach((el) => el.classList.add('visible'));
 }
 
-// نموذج طلب العضوية — يُرسَل إلى بريد الجمعية عبر خدمة FormSubmit
+// نموذج طلب العضوية — يُرسَل إلى بريد الجمعية عبر خدمة FormSubmit (لصفحة membership.html)
 const JOIN_ENDPOINT = 'https://formsubmit.co/ajax/nafa.lawyers@gmail.com';
 const joinForm = document.getElementById('join-form');
 
