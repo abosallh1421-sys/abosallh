@@ -85,3 +85,16 @@ if (joinForm) {
     }
   });
 }
+
+// قسم القيادة: لا يظهر إلا بعد تحميل الصور الثلاث بنجاح
+const leadership = document.querySelector('.leadership');
+
+if (leadership) {
+  const photos = [...leadership.querySelectorAll('img')];
+  const loaded = (img) => new Promise((resolve, reject) => {
+    if (img.complete) return img.naturalWidth ? resolve() : reject();
+    img.addEventListener('load', resolve, { once: true });
+    img.addEventListener('error', reject, { once: true });
+  });
+  Promise.all(photos.map(loaded)).then(() => leadership.classList.remove('is-pending'), () => {});
+}

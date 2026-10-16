@@ -23,3 +23,5 @@ https://abosallh1421-sys.github.io/abosallh/
 - أسماء مجلس الإدارة ومناصبهم من خطاب المركز الوطني رقم PTEB054802 (دون أرقام الهويات).
 - `assets/docs/license-certificate.pdf` — شهادة الترخيص.
 - نموذج طلب العضوية يُرسل إلى nafa.lawyers@gmail.com عبر خدمة FormSubmit (يتطلب تفعيلًا لمرة واحدة من رسالة تصل للبريد عند أول طلب).
+- قسم القيادة أعلى الرئيسية يظهر تلقائيًا عند رفع الصور الثلاث إلى `assets/img/leaders/` بالأسماء:
+  `king.jpg` (الملك سلمان)، `crown-prince.jpg` (ولي العهد)، `qassim-governor.jpg` (أمير القصيم) — ويُفضّل مقاس طولي 4:5.

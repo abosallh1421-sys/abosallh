@@ -117,6 +117,23 @@ strong { font-weight: 600; }
 .breadcrumb { font-size: .88rem; color: var(--gold-soft); margin-bottom: .6em; }
 .breadcrumb a { color: var(--gold-soft); text-decoration: none; }
 
+/* القيادة */
+.leadership { background: var(--cream); border-bottom: 1px solid var(--line); padding: 28px 0 24px; }
+.leadership.is-pending { display: none; }
+.leaders-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; max-width: 900px; }
+.leader-photo:not(.leader-main) { padding-top: 26px; }
+.leader-photo { margin: 0; text-align: center; }
+.leader-photo img {
+  width: 150px; aspect-ratio: 4 / 5; height: auto; object-fit: cover; object-position: top;
+  margin: 0 auto 10px; border-radius: 14px; border: 3px solid var(--white);
+  box-shadow: 0 0 0 1px var(--gold), var(--shadow);
+}
+.leader-main img { width: 176px; }
+.leader-photo figcaption { display: grid; line-height: 1.5; }
+.leader-photo small { color: var(--gold); font-size: .78rem; font-weight: 500; }
+.leader-photo b { color: var(--green); font-weight: 600; font-size: .95rem; }
+.leader-photo span { color: var(--muted); font-size: .8rem; }
+
 /* شريط الحقائق */
 .facts { margin-top: -54px; position: relative; z-index: 2; }
 .facts-grid {
@@ -391,6 +408,11 @@ strong { font-weight: 600; }
 /* الجوال */
 @media (max-width: 600px) {
   body { font-size: 16px; }
+  .leaders-row { gap: 10px; }
+  .leader-photo:not(.leader-main) { padding-top: 0; }
+  .leader-photo img, .leader-main img { width: 100%; max-width: 120px; }
+  .leader-photo b { font-size: .78rem; }
+  .leader-photo small, .leader-photo span { font-size: .68rem; }
   .brand img { height: 38px; }
   .cards-3, .cards-4, .maxims, .members, .steps, .form-grid { grid-template-columns: 1fr; }
   .doc-card { grid-template-columns: 1fr; text-align: center; }
