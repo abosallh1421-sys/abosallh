@@ -100,7 +100,10 @@ const SITE = {
       <div class="container">
         <div class="footer-grid">
           <div>
-            <img src="assets/img/logo-light.svg" alt="شعار ${SITE.name}" width="174" height="54">
+            <div class="lockup lockup-footer">
+              <img src="assets/img/logo-light.svg" alt="" width="174" height="54">
+              <span>${SITE.name}</span>
+            </div>
             <p>جمعية أهلية مرخّصة، مقرها ${SITE.hq}، تحت إشراف ${SITE.supervisor}.</p>
           </div>
           <nav aria-label="خريطة الموقع">

@@ -263,10 +263,36 @@ strong { font-weight: 700; }
 .profile small { margin-top: auto; padding-top: 6px; color: var(--gold); font-size: .78rem; }
 .more-link .btn + .btn { margin-inline-start: 8px; }
 
-/* قصة الشعار (من نحن) */
-.logo-frame { background: #f5f0e6; }
-.brand-quote { margin: 0; padding-inline-start: 22px; border-inline-start: 4px solid var(--gold); font-size: 1.12rem; }
-.brand-quote p:last-child { margin-bottom: 0; }
+/* الشعار والاسم تحته */
+.lockup { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; }
+.lockup img { width: auto; }
+.lockup figcaption, .lockup span { font-family: var(--font-head); font-weight: 600; color: var(--heading); letter-spacing: .01em; }
+.lockup .logo-dark { display: none; }
+.lockup-card {
+  margin: 0; display: grid; justify-items: center; gap: 28px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: clamp(28px, 5vw, 56px) 20px;
+}
+.lockup-card .lockup img { height: clamp(72px, 10vw, 104px); }
+.lockup-card .lockup figcaption { font-size: clamp(1.05rem, 2vw, 1.35rem); }
+.lockup-card .swatches { justify-content: center; margin: 0; }
+.site-footer .lockup { margin-bottom: 14px; }
+.site-footer .lockup img { height: 54px; margin: 0; }
+.site-footer .lockup span { color: var(--cream); font-size: .9rem; }
+:root[data-theme="dark"] .lockup .logo-light { display: none; }
+:root[data-theme="dark"] .lockup .logo-dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lockup .logo-light { display: none; }
+  :root:not([data-theme="light"]) .lockup .logo-dark { display: block; }
+}
+
+/* القيم */
+.card .ref, .values .ref { display: block; margin-top: 10px; color: var(--gold); font-size: .8rem; }
+.card-green .ref { color: var(--gold-soft); }
+.values-title { text-align: center; margin: 56px 0 22px; font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
+.values { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.values li { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--gold); border-radius: 14px; padding: 20px 22px; }
+.values b { font-family: var(--font-head); color: var(--heading); font-weight: 600; font-size: 1.08rem; }
+.values p { margin: .3em 0 0; color: var(--muted); font-size: .95rem; }
 .swatches { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
 .swatches li {
   display: grid; grid-template-columns: auto auto; column-gap: 10px; align-items: center;
@@ -556,7 +582,7 @@ strong { font-weight: 700; }
 
 @media (max-width: 1020px) {
   .cards-4, .steps { grid-template-columns: repeat(2, 1fr); }
-  .cards-3, .maxims, .members, .sitemap, .profile { grid-template-columns: repeat(2, 1fr); }
+  .cards-3, .maxims, .members, .sitemap, .profile, .values { grid-template-columns: repeat(2, 1fr); }
   .profile-3 { grid-template-columns: 1fr; }
 }
 
@@ -580,7 +606,7 @@ strong { font-weight: 700; }
   .leader-photo b { font-size: .78rem; }
   .leader-photo small, .leader-photo span { font-size: .68rem; }
   .brand img { height: 38px; }
-  .cards-3, .cards-4, .maxims, .members, .steps, .form-grid, .sitemap { grid-template-columns: 1fr; }
+  .cards-3, .cards-4, .maxims, .members, .steps, .form-grid, .sitemap, .values { grid-template-columns: 1fr; }
   .profile { gap: 10px; }
   .profile > div { padding: 12px 14px; }
   .profile dd { font-size: 1rem; }
