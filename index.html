@@ -3,61 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>جمعية الخير الخيرية</title>
-  <meta name="description" content="الموقع الرسمي لجمعية الخير الخيرية: فكرتنا، رؤيتنا، أهدافنا، والفئات المستفيدة من خدماتنا.">
+  <title>جمعية نفع القانونية</title>
+  <meta name="description" content="جمعية نفع القانونية: جمعية أهلية مقرها بريدة، تُعنى بتأهيل المتخصصين وخريجي القانون، وتطوير الخدمات القانونية، ونشر الثقافة القانونية في المجتمع.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-
-  <!-- الترويسة والقائمة -->
-  <header class="site-header" id="top">
+<body id="top">
+  <header class="site-header">
     <div class="container nav-bar">
-      <a href="#top" class="brand">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.5 1.1 4.3 2.4.4.6 1.6.6 2 0 .8-1.3 2.2-2.4 4.3-2.4 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21z"/></svg>
-        </span>
-        <span class="brand-name">جمعية الخير</span>
+      <a href="index.html" class="brand" aria-label="جمعية نفع القانونية - الرئيسية">
+        <img src="assets/img/symbol.svg" alt="" width="48" height="44">
+        <span class="brand-text"><b>جمعية نفع القانونية</b><small>مرخّصة برقم 1000899100</small></span>
       </a>
       <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
-      <nav id="main-nav" class="main-nav">
-        <a href="#about">فكرة الجمعية</a>
-        <a href="#vision">الرؤية والرسالة</a>
-        <a href="#goals">الأهداف</a>
-        <a href="#beneficiaries">المستفيدون</a>
-        <a href="#contact" class="btn btn-small">تواصل معنا</a>
+      <nav id="main-nav" class="main-nav" aria-label="القائمة الرئيسية">
+        <a href="index.html" aria-current="page">الرئيسية</a>
+        <a href="regulations.html">اللوائح والسياسات</a>
+        <a href="board.html">مجلس الإدارة والجمعية العمومية</a>
+        <a href="news.html">أخبار الجمعية</a>
+        <a href="join.html" class="nav-cta">انضم إلى الجمعية العمومية</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- القسم الرئيسي -->
+    <!-- البطل -->
     <section class="hero">
       <div class="container hero-inner">
-        <p class="eyebrow">جمعية خيرية غير ربحية</p>
-        <h1>معًا نصنع أثرًا يدوم<br>ونزرع الأمل في كل بيت</h1>
-        <p class="lead">
-          نعمل على تمكين الأسر المحتاجة ورعاية الأيتام وكبار السن وذوي الإعاقة،
-          من خلال برامج تنموية مستدامة تحفظ كرامة الإنسان وتعزز التكافل في المجتمع.
-        </p>
-        <div class="hero-actions">
-          <a href="#goals" class="btn">تعرّف على أهدافنا</a>
-          <a href="#contact" class="btn btn-ghost">انضم إلينا متطوعًا</a>
+        <div>
+          <p class="eyebrow">جمعية أهلية مرخّصة من المركز الوطني لتنمية القطاع غير الربحي</p>
+          <h1>جمعية نفع <span>القانونية</span></h1>
+          <p class="lead">
+            نؤهّل الكفاءات القانونية، ونطوّر الخدمات القانونية للفئات المستفيدة،
+            ونقرّب المعرفة القانونية من كل فرد في المجتمع؛ لأن الناس هم أصل النفع.
+          </p>
+          <div class="hero-actions">
+            <a href="join.html" class="btn btn-gold">انضم إلى الجمعية العمومية</a>
+            <a href="#about" class="btn btn-ghost">تعرّف على الجمعية</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="assets/img/scales.svg" alt="رسم لميزان العدالة" width="360" height="360">
         </div>
       </div>
     </section>
 
-    <!-- أرقام -->
-    <section class="stats" aria-label="إنجازات الجمعية">
-      <div class="container stats-grid">
-        <div class="stat"><strong data-count="1200">0</strong><span>أسرة مستفيدة</span></div>
-        <div class="stat"><strong data-count="350">0</strong><span>يتيم مكفول</span></div>
-        <div class="stat"><strong data-count="40">0</strong><span>برنامجًا ومبادرة</span></div>
-        <div class="stat"><strong data-count="500">0</strong><span>متطوع ومتطوعة</span></div>
+    <!-- حقائق -->
+    <section class="facts" aria-label="بيانات الجمعية">
+      <div class="container facts-grid">
+        <div class="fact"><strong>1000899100</strong><span>رقم الترخيص</span></div>
+        <div class="fact"><strong>1448/03/17هـ</strong><span>تاريخ الترخيص</span></div>
+        <div class="fact"><strong>بريدة – القصيم</strong><span>المقر الرئيسي</span></div>
+        <div class="fact"><strong>١٨ عضوًا</strong><span>أعضاء مؤسسون</span></div>
       </div>
     </section>
 
@@ -68,44 +70,53 @@
           <p class="eyebrow">من نحن</p>
           <h2>فكرة الجمعية</h2>
           <p>
-            انطلقت فكرة الجمعية من إيمان مجموعة من أبناء المجتمع بأن العمل الخيري
-            ليس مجرد مساعدة عابرة، بل مسؤولية مشتركة تهدف إلى نقل المحتاج من دائرة
-            الحاجة إلى دائرة الإنتاج والاكتفاء.
+            انطلقت <strong>جمعية نفع القانونية</strong> من قناعة مجموعة من المختصين بأن المعرفة القانونية
+            حقٌّ للجميع، وأن خريج القانون يحتاج إلى بيئة تحتضنه وتصقل مهاراته قبل أن يمارس المهنة.
           </p>
           <p>
-            لذلك نجمع بين الإغاثة العاجلة للأسر الأشد احتياجًا، وبرامج التمكين
-            طويلة المدى في التعليم والتدريب والتأهيل المهني، مع الالتزام بالشفافية
-            في إدارة التبرعات وإيصالها إلى مستحقيها.
+            لذلك جاءت الجمعية جسرًا يجمع بين أهل الاختصاص والخريجين الجدد من جهة، والمجتمع
+            المحتاج إلى الوعي والخدمة القانونية من جهة أخرى؛ فتقدّم التدريب والتأهيل، وتساهم في
+            تطوير الخدمات القانونية، وتنشر الثقافة القانونية، في إطار من النزاهة والمهنية.
           </p>
+          <p>
+            وتعمل الجمعية ضمن تصنيف <strong>الخدمات القانونية والمحاماة والاستشارات القانونية</strong>،
+            ومقرها الرئيسي مدينة بريدة، ويمتد نطاق خدماتها إلى مناطق المملكة.
+          </p>
+          <div class="logo-story">
+            <img src="assets/img/symbol.svg" alt="رمز جمعية نفع" width="76" height="70">
+            <p>
+              <strong>قصة الشعار:</strong> أشخاص بأذرع مرفوعة تلتقي في نقطة واحدة، رمزًا للتكاتف والعون المتبادل،
+              والنقطة الذهبية هي القيمة والأثر الذي تتركه الجمعية. وكل شخص بقوسه ونقطته يلمّح لحرف النون،
+              أول حرف من «نفع».
+            </p>
+          </div>
         </div>
-        <ul class="pillars">
-          <li><span class="pillar-icon">🤝</span><div><h3>التكافل</h3><p>نربط المحسنين بالمحتاجين في منظومة واحدة موثوقة.</p></div></li>
-          <li><span class="pillar-icon">🌱</span><div><h3>الاستدامة</h3><p>نركّز على حلول تصنع اكتفاءً لا اتكالًا.</p></div></li>
-          <li><span class="pillar-icon">🔍</span><div><h3>الشفافية</h3><p>تقارير دورية توضح أين وكيف تُصرف التبرعات.</p></div></li>
-        </ul>
+        <div class="media-frame">
+          <img src="assets/img/brand-stationery.jpg" alt="الهوية البصرية لجمعية نفع على المطبوعات" width="1400" height="910" loading="lazy">
+        </div>
       </div>
     </section>
 
     <!-- الرؤية والرسالة -->
-    <section id="vision" class="section section-tint">
+    <section id="vision" class="section section-cream">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">إلى أين نتجه</p>
           <h2>الرؤية والرسالة والقيم</h2>
         </div>
-        <div class="cards three">
-          <article class="card card-feature">
+        <div class="cards cards-3">
+          <article class="card card-green">
             <h3>رؤيتنا</h3>
-            <p>مجتمع متكافل لا يُترك فيه محتاج دون رعاية، وتُتاح فيه لكل أسرة فرصة حياة كريمة ومستقرة.</p>
+            <p>أن نكون المرجع الأهلي الرائد في تأهيل الكفاءات القانونية ونشر الوعي القانوني، لمجتمعٍ يعرف حقوقه ويؤدي واجباته.</p>
           </article>
           <article class="card">
             <h3>رسالتنا</h3>
-            <p>تقديم خدمات خيرية وتنموية نوعية للفئات المستحقة، بكفاءة واحترافية، عبر شراكات فاعلة مع أفراد المجتمع ومؤسساته.</p>
+            <p>تقديم برامج تدريب وتأهيل وخدمات قانونية نوعية للمتخصصين وخريجي القانون والفئات المستفيدة، عبر شراكات فاعلة تسهم في تعزيز العدالة وخدمة المجتمع.</p>
           </article>
           <article class="card">
             <h3>قيمنا</h3>
-            <ul class="values">
-              <li>الأمانة</li><li>الإحسان</li><li>الشفافية</li><li>العمل بروح الفريق</li><li>حفظ الكرامة</li>
+            <ul class="chips">
+              <li>النزاهة</li><li>العدالة</li><li>المهنية</li><li>السرية</li><li>الشراكة</li><li>المسؤولية المجتمعية</li>
             </ul>
           </article>
         </div>
@@ -118,79 +129,139 @@
         <div class="section-head">
           <p class="eyebrow">ما نسعى إليه</p>
           <h2>أهداف الجمعية</h2>
+          <p>تهدف الجمعية إلى تحقيق الغرض الذي أُنشئت من أجله، وذلك من خلال الأهداف الآتية:</p>
         </div>
         <ol class="goals">
-          <li><h3>رعاية الأسر المحتاجة</h3><p>توفير السلال الغذائية والمساعدات المالية والعينية للأسر ذات الدخل المحدود.</p></li>
-          <li><h3>كفالة الأيتام</h3><p>رعاية الأيتام تعليميًا وصحيًا واجتماعيًا حتى يصلوا إلى الاستقلال.</p></li>
-          <li><h3>التمكين الاقتصادي</h3><p>تدريب المستفيدين وتأهيلهم لسوق العمل ودعم المشاريع الأسرية الصغيرة.</p></li>
-          <li><h3>دعم التعليم</h3><p>تقديم المنح الدراسية والحقائب المدرسية وبرامج التقوية للطلاب المحتاجين.</p></li>
-          <li><h3>الرعاية الصحية</h3><p>المساهمة في تكاليف العلاج والأجهزة الطبية للمرضى غير القادرين.</p></li>
-          <li><h3>نشر ثقافة التطوع</h3><p>استقطاب المتطوعين وتأهيلهم وإشراكهم في خدمة المجتمع.</p></li>
+          <li><div><h3>التدريب والتأهيل</h3><p>التدريب والتأهيل للمتخصصين في مجال القانون.</p></div></li>
+          <li><div><h3>تطوير الخدمات القانونية</h3><p>المساهمة بتطوير الخدمات القانونية للفئات المستفيدة.</p></div></li>
+          <li><div><h3>كفاءات للخدمة المجتمعية</h3><p>تأهيل كفاءات قانونية تساهم في الخدمة المجتمعية.</p></div></li>
+          <li><div><h3>نشر الثقافة القانونية</h3><p>نشر الثقافة القانونية بين أفراد المجتمع.</p></div></li>
         </ol>
+        <p class="source-note">المصدر: اللائحة الأساسية للجمعية – المادة الخامسة.</p>
       </div>
     </section>
 
-    <!-- المستفيدون -->
-    <section id="beneficiaries" class="section section-tint">
+    <!-- الفئات المستهدفة -->
+    <section id="audience" class="section section-cream audience">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">لمن نعمل</p>
-          <h2>الفئات المستفيدة</h2>
-          <p class="section-sub">نخدم الفئات الأشد احتياجًا وفق معايير واضحة ودراسة اجتماعية لكل حالة.</p>
+          <h2>الفئات المستهدفة</h2>
+          <p>نخدم كل من يحتاج إلى المعرفة أو الخدمة القانونية، ونحتضن من يحمل رسالة القانون.</p>
         </div>
-        <div class="cards four">
-          <article class="card beneficiary"><span class="b-icon">🏠</span><h3>الأسر ذات الدخل المحدود</h3><p>الأسر التي لا يكفي دخلها لتغطية احتياجاتها الأساسية.</p></article>
-          <article class="card beneficiary"><span class="b-icon">🧒</span><h3>الأيتام</h3><p>الأطفال الذين فقدوا العائل، وأسرهم الحاضنة.</p></article>
-          <article class="card beneficiary"><span class="b-icon">👩‍👧</span><h3>الأرامل والمطلقات</h3><p>النساء المعيلات لأسرهن دون سند أو دخل ثابت.</p></article>
-          <article class="card beneficiary"><span class="b-icon">👴</span><h3>كبار السن</h3><p>المسنون الذين يحتاجون إلى رعاية أو دعم معيشي.</p></article>
-          <article class="card beneficiary"><span class="b-icon">♿</span><h3>ذوو الإعاقة</h3><p>دعم الأجهزة التعويضية وبرامج التأهيل والدمج.</p></article>
-          <article class="card beneficiary"><span class="b-icon">🩺</span><h3>المرضى غير القادرين</h3><p>المساهمة في تكاليف العلاج والأدوية.</p></article>
-          <article class="card beneficiary"><span class="b-icon">🎓</span><h3>الطلاب المحتاجون</h3><p>دعم الرسوم والمستلزمات الدراسية.</p></article>
-          <article class="card beneficiary"><span class="b-icon">🧑‍🔧</span><h3>الباحثون عن عمل</h3><p>برامج تدريب وتأهيل للحصول على فرصة عمل.</p></article>
+        <div class="cards cards-4">
+          <article class="card">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 21h14M6 7l-3 7a3 3 0 0 0 6 0L6 7zm12 0l-3 7a3 3 0 0 0 6 0l-3-7zM6 7h12"/></svg></span>
+            <h3>المتخصصون في مجال القانون</h3>
+            <p>المحامون والمستشارون والمتدربون الراغبون في تطوير مهاراتهم المهنية.</p>
+          </article>
+          <article class="card highlight">
+            <span class="badge">أولوية</span><br>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg></span>
+            <h3>خريجو أقسام القانون</h3>
+            <p>خريجو كليات وأقسام القانون في الجامعات، لتأهيلهم وتهيئتهم لسوق العمل.</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <h3>الفئات المستفيدة</h3>
+            <p>من يحتاجون إلى الخدمات والاستشارات القانونية وفق سياسة الجمعية في خدمة المستفيدين.</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.3.9-4 3-4.5 2 .4 3 2 3 4.5"/></svg></span>
+            <h3>أفراد المجتمع</h3>
+            <p>رفع الوعي القانوني لدى أفراد المجتمع ليعرفوا حقوقهم وواجباتهم.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- تواصل -->
-    <section id="contact" class="section">
-      <div class="container two-col">
-        <div>
-          <p class="eyebrow">كن جزءًا من الأثر</p>
-          <h2>تواصل معنا</h2>
-          <p>سواء كنت ترغب في التبرع أو التطوع أو التقدم بطلب مساعدة، يسعدنا تواصلك.</p>
-          <ul class="contact-list">
-            <li><strong>الهاتف:</strong> <a href="tel:+966500000000" dir="ltr">+966 50 000 0000</a></li>
-            <li><strong>البريد:</strong> <a href="mailto:info@example.org">info@example.org</a></li>
-            <li><strong>العنوان:</strong> المملكة العربية السعودية</li>
-            <li><strong>أوقات العمل:</strong> الأحد – الخميس، 8 صباحًا – 4 مساءً</li>
-          </ul>
+    <!-- عبارات قانونية -->
+    <section id="maxims" class="section section-green">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">من روح القانون</p>
+          <h2>عبارات قانونية</h2>
+          <p>قواعد ومبادئ راسخة نؤمن بها ونعمل على نشر الوعي بها.</p>
         </div>
-        <form class="contact-form" id="contact-form" novalidate>
-          <label>الاسم<input type="text" name="name" required></label>
-          <label>رقم الجوال أو البريد<input type="text" name="contact" required></label>
-          <label>نوع الطلب
-            <select name="type">
-              <option>تبرع</option>
-              <option>تطوع</option>
-              <option>طلب مساعدة</option>
-              <option>استفسار عام</option>
-            </select>
-          </label>
-          <label>رسالتك<textarea name="message" rows="4"></textarea></label>
-          <button type="submit" class="btn">إرسال</button>
-          <p class="form-note" role="status" aria-live="polite"></p>
-        </form>
+        <div class="maxims">
+          <blockquote class="maxim"><p>العدل أساس المُلك.</p><cite>حكمة مأثورة</cite></blockquote>
+          <blockquote class="maxim"><p>المتهم بريء حتى تثبت إدانته.</p><cite>مبدأ قانوني</cite></blockquote>
+          <blockquote class="maxim"><p>لا جريمة ولا عقوبة إلا بنص.</p><cite>مبدأ الشرعية الجنائية</cite></blockquote>
+          <blockquote class="maxim"><p>العقد شريعة المتعاقدين.</p><cite>قاعدة قانونية</cite></blockquote>
+          <blockquote class="maxim"><p>الأصل براءة الذمة.</p><cite>قاعدة فقهية</cite></blockquote>
+          <blockquote class="maxim"><p>اعرف حقّك؛ فالوعي القانوني أول الحماية.</p><cite>عبارة توعوية</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- آخر الأخبار -->
+    <section id="latest-news" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">ماذا يحدث في الجمعية</p>
+          <h2>آخر الأخبار</h2>
+        </div>
+        <article class="news-card">
+          <img src="assets/img/meeting.svg" alt="رسم توضيحي لاجتماع مجلس الإدارة" width="640" height="360" loading="lazy">
+          <div class="news-body">
+            <div class="news-meta"><span class="tag">لقاءات وشراكات</span><span>بريدة</span></div>
+            <h3>مجلس إدارة «نفع القانونية» يجتمع بمساعد أمين الغرفة التجارية الأستاذ صالح الجاسر</h3>
+            <p>عقد مجلس إدارة الجمعية اجتماعًا مع سعادة الأستاذ صالح الجاسر، مساعد أمين الغرفة التجارية في بريدة، لبحث سبل التعاون وتعزيز الشراكة في خدمة المجتمع.</p>
+            <a href="news.html#jasser-meeting" class="btn btn-outline">اقرأ الخبر كاملًا</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- دعوة للانضمام -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>كن جزءًا من نفع</h2>
+            <p>انضم إلى الجمعية العمومية، وشارك في صناعة الأثر القانوني في مجتمعك.</p>
+          </div>
+          <a href="join.html" class="btn">قدّم طلب العضوية</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> جمعية الخير الخيرية. جميع الحقوق محفوظة.</p>
-      <a href="#top">العودة للأعلى ↑</a>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/img/logo-light.svg" alt="شعار جمعية نفع" width="174" height="54">
+          <p>جمعية أهلية متخصصة في الخدمات القانونية، تعمل على تأهيل الكفاءات القانونية ونشر الثقافة القانونية بين أفراد المجتمع.</p>
+        </div>
+        <div>
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="regulations.html">اللوائح والسياسات</a></li>
+            <li><a href="board.html">مجلس الإدارة والجمعية العمومية</a></li>
+            <li><a href="news.html">أخبار الجمعية</a></li>
+            <li><a href="join.html">انضم إلى الجمعية العمومية</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>بيانات الجمعية</h4>
+          <ul>
+            <li>المقر الرئيسي: مدينة بريدة – منطقة القصيم</li>
+            <li>رقم الترخيص: 1000899100</li>
+            <li>تاريخ الترخيص: 1448/03/17هـ</li>
+            <li>الجهة المشرفة: وزارة العدل</li>
+            <li>مسجّلة لدى المركز الوطني لتنمية القطاع غير الربحي</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span class="year"></span> جمعية نفع القانونية. جميع الحقوق محفوظة.</p>
+        <a href="#top">العودة للأعلى ↑</a>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
